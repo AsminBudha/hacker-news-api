@@ -1,3 +1,5 @@
+import path from 'os';
+
 // Update with your config settings.
 
 module.exports = {
@@ -31,7 +33,7 @@ module.exports = {
     migrations: {
       tableName: 'knex_migrations'
     },
-    seeds: { directory: './seeds' },
+    seeds: { directory: __dirname + '/seeds' },
     debug: false
   }
 
