@@ -4,7 +4,6 @@
  * Configuration settings to connect with database.
 */
 module.exports = {
-
   development: {
     client: 'pg',
     connection: {
@@ -23,7 +22,6 @@ module.exports = {
     seeds: { directory: './seeds' },
     debug: false
   },
-
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL,
@@ -37,5 +35,4 @@ module.exports = {
     seeds: { directory: './seeds' },
     debug: false
   }
-
 };
