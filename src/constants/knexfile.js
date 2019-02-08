@@ -1,5 +1,8 @@
 // Update with your config settings.
 
+/**
+ * Configuration settings to connect with database.
+*/
 module.exports = {
 
   development: {

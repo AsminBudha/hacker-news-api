@@ -1,4 +1,7 @@
-
+/**
+ * Create table-'user'.
+ * Fields- id, email and password.
+*/
 exports.up = function (knex, Promise) {
   return knex.schema
     //<User>
@@ -12,6 +15,9 @@ exports.up = function (knex, Promise) {
     });
 };
 
+/**
+ * Delete table-'user'.
+*/
 exports.down = function (knex, Promise) {
   return knex.schema.dropTableIfExists('user');
 };

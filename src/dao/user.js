@@ -29,6 +29,13 @@ export const checkIfUserNamePwdMatch = (username, password) => {
   });
 }
 
+/**
+ * Insert Username and password into database.
+ *
+ * @param {String} username
+ * @param {String} password
+ * @returns {Number} Id on which user is added.
+ */
 export const insertUsernamePassword = (username, password) => {
   return knex.insert({
     email: username,
@@ -39,8 +46,12 @@ export const insertUsernamePassword = (username, password) => {
     });
 }
 
+//Code related to add username and password in file I/O.
 const FILE_PATH = path.join(__dirname, '../../res/userList.txt');
 
+/**
+ * @returns {String} Returns data in file or empty array.
+ */
 export const readFromUserFile = () => {
   try {
     const data = fs.readFileSync(FILE_PATH, 'utf8');
@@ -50,6 +61,11 @@ export const readFromUserFile = () => {
   }
 }
 
+/**
+ * Write data into file.
+ *
+ * @param {Object} users All users data that is to be inserted into file.
+ */
 export const writeIntoUserFIle = (users) => {
   try {
     fs.writeFileSync(FILE_PATH, users, 'utf8');
